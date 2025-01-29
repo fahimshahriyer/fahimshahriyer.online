@@ -13,12 +13,12 @@ export default function Home() {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-4 text-center">
           <div className="space-y-4">
-            <div className="relative w-[280px] h-[280px] mx-auto mb-8">
+            <div className="relative w-[280px] h-[280px] mx-auto mb-8 rounded-full border-8 border-white/10 overflow-hidden">
               <Image
                 src="/profile.png"
                 alt="Profile"
                 fill
-                className="object-cover rounded-full border-4 border-white/10"
+                className="object-cover   scale-150"
               />
             </div>
             <h1 className="text-[100px] md:text-[100px] font-medium text-center text-primary relative z-20 leading-none">
