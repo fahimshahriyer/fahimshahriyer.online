@@ -6,6 +6,7 @@ import WorksSection from "./_landing/works";
 import CertificationsSection from "./_landing/certification";
 import LanguageSkillsSection from "./_landing/language";
 import ContactSection from "./_landing/contact";
+import { WordAnimation } from "@/components/animated-text";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
               Fahim Shahriyer
             </h1>
             <h2 className="text-[100px] md:text-[100px] leading-none text-dotted text-center mt-0 p-2">
-              software project manager
+              <WordAnimation />
             </h2>
             <p className="max-w-2xl mx-auto text-gray-400 text-lg">
               Experienced Professional with 6+ years of experience in Agile

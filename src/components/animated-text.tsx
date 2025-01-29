@@ -1,57 +1,53 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-export function AnimatedText() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+const words = ["Sofware Project Manager", "Web Developer", "AI Enthusiast"];
+
+function useWordCycle(words: string[], interval: number) {
+  const [index, setIndex] = useState(0);
+  const [isInitial, setIsInitial] = useState(true);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const text = "to rule them all";
-    const dotSize = 4;
-    const dotSpacing = 8;
-    const color = "#666";
-
-    // Set canvas size
-    canvas.width = 800;
-    canvas.height = 100;
-
-    // Configure text
-    ctx.font = "48px Inter";
-    ctx.fillStyle = color;
-    ctx.textBaseline = "middle";
-
-    // Get text metrics
-    const metrics = ctx.measureText(text);
-    const textWidth = metrics.width;
-
-    // Center text position
-    const startX = (canvas.width - textWidth) / 2;
-    const startY = canvas.height / 2;
-
-    // Draw text first to get pixel data
-    ctx.fillText(text, startX, startY);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Draw dots where text pixels are
-    for (let y = 0; y < canvas.height; y += dotSpacing) {
-      for (let x = 0; x < canvas.width; x += dotSpacing) {
-        const i = (y * canvas.width + x) * 4;
-        if (imageData.data[i + 3] > 128) {
-          // If pixel is opaque
-          ctx.beginPath();
-          ctx.arc(x, y, dotSize / 2, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
+    if (isInitial) {
+      setIndex(Math.floor(Math.random() * words.length));
+      setIsInitial(false);
+      return;
     }
-  }, []);
 
-  return <canvas ref={canvasRef} className="w-full max-w-[800px] mx-auto" />;
+    const timer = setInterval(() => {
+      setIndex((current) => (current + 1) % words.length);
+    }, interval);
+    return () => clearInterval(timer);
+  }, [words, interval, isInitial]);
+
+  return words[index];
+}
+
+export function WordAnimation() {
+  const word = useWordCycle(words, 2100);
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div key={word} className="text-primary inline-block">
+        {word?.split("").map((char, index) => (
+          <motion.span
+            key={`${word}-${char}-${index.toString()}`}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{
+              duration: 0.15,
+              delay: index * 0.015,
+              ease: "easeOut",
+            }}
+            style={{ display: "inline-block", whiteSpace: "pre" }}
+          >
+            {char}
+          </motion.span>
+        ))}
+      </motion.div>
+    </AnimatePresence>
+  );
 }
