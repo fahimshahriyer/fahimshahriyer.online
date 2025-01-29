@@ -49,7 +49,7 @@ export default function Header() {
           </Link>
           <Link
             className="h-8 items-center border-l-[1px] pl-8 justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
-            href="#"
+            href="#contact"
           >
             Get in touch
           </Link>
