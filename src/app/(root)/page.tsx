@@ -5,6 +5,7 @@ import EducationSection from "./_landing/education";
 import WorksSection from "./_landing/works";
 import CertificationsSection from "./_landing/certification";
 import LanguageSkillsSection from "./_landing/language";
+import ContactSection from "./_landing/contact";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
       <WorksSection />
       <CertificationsSection />
       <LanguageSkillsSection />
+      <ContactSection />
     </div>
   );
 }

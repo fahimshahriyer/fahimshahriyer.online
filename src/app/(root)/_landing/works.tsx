@@ -61,7 +61,7 @@ function ProjectCard({
   tech,
 }: Project) {
   return (
-    <div className="border border-zinc-800 p-6 rounded-lg hover:border-zinc-700 transition-colors">
+    <div className="border border-zinc-800 p-6 rounded-lg hover:border-zinc-700 transition-colors bg-background">
       <h3 className="text-xl font-medium mb-2">{title}</h3>
       <p className="text-sm text-zinc-500 mb-1">{client}</p>
       <p className="text-sm text-zinc-400 mb-2">
@@ -88,15 +88,16 @@ function ProjectCard({
 
 export default function WorksSection() {
   return (
-    <section className="py-20 bg-black text-white border-t border-b" id="works">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl mb-12 text-center">Works</h2>
+    <section className="py-20 bg-black text-white border-t border-b relative overflow-hidden" id="works">
+      <div className="container mx-auto px-4 z-10 relative">
+        <h2 className="text-7xl mb-12 text-center">Works</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
       </div>
+      <div className="dotted-bg w-[calc(100vw+1400px)] h-full absolute top-0 -left-[1200px] z-0"></div>
     </section>
   );
 }

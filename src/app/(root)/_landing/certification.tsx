@@ -51,7 +51,7 @@ export default function CertificationsSection() {
   return (
     <section className="py-20 dark:bg-[#121212] text-white cursor-pointer" id="certifications">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl mb-12 text-center">
+        <h2 className="text-6xl mb-12 text-center">
           Certifications & Training
         </h2>
         <div className="grid md:grid-cols-2 gap-6">

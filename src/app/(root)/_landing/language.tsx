@@ -8,7 +8,7 @@ export default function LanguageSkillsSection() {
   return (
     <section className="py-20 bg-black text-white" id="languages">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl mb-12 text-center">Language Skills</h2>
+        <h2 className="text-6xl mb-12 text-center">Language Skills</h2>
         <div className="max-w-2xl mx-auto space-y-8">
           {languages.map((language, index) => (
             <div key={index} className="space-y-2">

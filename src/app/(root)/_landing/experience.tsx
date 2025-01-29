@@ -82,8 +82,9 @@ const ExperienceCard = ({
   duration,
   responsibilities,
   location,
+  keyAchievements,
 }: Experience) => (
-  <div className="border border-zinc-800 p-6 bg-background rounded-lg hover:border-zinc-700 transition-colors cursor-pointer">
+  <div className="border border-zinc-800 p-6 bg-background rounded-lg hover:border-zinc-700 transition-colors cursor-pointer mb-8 relative z-10">
     <div className="flex justify-between items-start mb-4">
       <div>
         <h3 className="text-xl font-medium">{title}</h3>
@@ -99,6 +100,16 @@ const ExperienceCard = ({
         <li key={index}>{task}</li>
       ))}
     </ul>
+    {keyAchievements && keyAchievements.length > 0 && (
+      <div className="mt-4">
+        <h4 className="text-zinc-200 font-medium mb-2">Key Achievements:</h4>
+        <ul className="list-disc pl-3 text-zinc-400 space-y-2">
+          {keyAchievements.map((achievement, index) => (
+            <li key={index}>{achievement}</li>
+          ))}
+        </ul>
+      </div>
+    )}
   </div>
 );
 
@@ -110,7 +121,9 @@ export default function ExperienceSection() {
     >
       <div className="container mx-auto px-4 z-10 relative max-w-5xl">
         <h2 className="text-7xl mb-12 text-center">Experience</h2>
-        <div className="space-y-12">
+        <div className="space-y-12 relative">
+          {/* Timeline line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-zinc-700 -translate-x-1/2 z-0"></div>
           {experiences.map((exp, index) => (
             <ExperienceCard key={index} {...exp} />
           ))}
