@@ -10,37 +10,31 @@ export default function Header() {
           </Link>
           <Link
             className="h-8 items-center justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
-            href="#"
+            href="#experience"
           >
             Experience
           </Link>
           <Link
             className="h-8 items-center justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
-            href="#"
+            href="#education"
           >
             Education
           </Link>
           <Link
             className="h-8 items-center justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
-            href="#"
+            href="#works"
           >
-            Skills
+            Works
           </Link>
           <Link
             className="h-8 items-center justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
-            href="#"
-          >
-            Projects
-          </Link>
-          <Link
-            className="h-8 items-center justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
-            href="#"
+            href="#certifications"
           >
             Certifications & Training
           </Link>
           <Link
             className="h-8 items-center justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
-            href="#"
+            href="#languages"
           >
             Language Skills
           </Link>
@@ -48,9 +42,8 @@ export default function Header() {
             className="h-8 items-center border-l-[1px] pl-8 justify-center text-sm font-bold px-3 py-2 inline-flex text-secondary-foreground transition-opacity hover:opacity-70 duration-200"
             href="#"
           >
-            Contact Us
+            Get in touch
           </Link>
-
         </div>
       </nav>
     </header>

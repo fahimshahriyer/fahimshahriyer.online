@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 
 export default function RootLayout({
@@ -6,9 +7,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 }
