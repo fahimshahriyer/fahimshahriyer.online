@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import ExperienceSection from "./_landing/experience";
 import EducationSection from "./_landing/education";
