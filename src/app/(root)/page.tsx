@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import ExperienceSection from "./_landing/experience";
 import EducationSection from "./_landing/education";
@@ -7,6 +7,7 @@ import CertificationsSection from "./_landing/certification";
 import LanguageSkillsSection from "./_landing/language";
 import ContactSection from "./_landing/contact";
 import { WordAnimation } from "@/components/animated-text";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -34,7 +35,12 @@ export default function Home() {
               Focused on backlog management and stakeholder collaboration.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-              <Button className="w-full sm:w-auto">Get in Touch</Button>
+              <Link
+                href="#contact"
+                className={buttonVariants({ variant: "default" })}
+              >
+                Get in touch
+              </Link>
             </div>
           </div>
         </div>
