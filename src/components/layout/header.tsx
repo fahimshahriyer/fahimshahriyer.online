@@ -12,7 +12,7 @@ export default function Header() {
     <header className="sticky mt-4 top-4 z-50 px-2 md:px-4 md:flex justify-center">
       <nav className="border border-border px-4 flex items-center backdrop-filter backdrop-blur-xl bg-[#FFFFFF] dark:bg-[#121212] bg-opacity-70 h-[50px] z-20 relative md:flex justify-between">
         <Link className="flex items-center justify-center mr-6" href="/">
-          <span className="text-lg font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+          <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-teal-500 text-transparent bg-clip-text">
             FS
           </span>
         </Link>
