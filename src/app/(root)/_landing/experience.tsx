@@ -9,6 +9,17 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    title: "IT Project Manager (Pro Bono)",
+    company: "Legal Aid gUG (haftungsbeschränkt)",
+    duration: "Feb 2025 - Present",
+    location: "Berlin, Germany",
+    responsibilities: [
+      "Assisting in designing and implementing digital solutions to improve accessibility to German law.",
+      "Ensuring GDPR compliance in data handling and platform security.",
+      "Collaborating with legal experts, NGOs, and developers to enhance platform functionality.",
+    ],
+  },
+  {
     title: "Software Project Lead",
     company: "Enosis Solutions",
     duration: "Aug 2023 - July 2024",
