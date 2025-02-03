@@ -5,6 +5,7 @@ import EducationSection from "./_landing/education";
 import WorksSection from "./_landing/works";
 import CertificationsSection from "./_landing/certification";
 import LanguageSkillsSection from "./_landing/language";
+import VolunteeringSection from "./_landing/volunteering";
 import ContactSection from "./_landing/contact";
 import { WordAnimation } from "@/components/animated-text";
 import Link from "next/link";
@@ -50,6 +51,7 @@ export default function Home() {
       <WorksSection />
       <CertificationsSection />
       <LanguageSkillsSection />
+      <VolunteeringSection />
       <ContactSection />
     </div>
   );

@@ -88,7 +88,10 @@ function ProjectCard({
 
 export default function WorksSection() {
   return (
-    <section className="py-20 bg-black text-white border-t border-b relative overflow-hidden" id="works">
+    <section
+      className="py-20 bg-black text-white border-t border-b relative overflow-hidden"
+      id="works"
+    >
       <div className="container mx-auto px-4 z-10 relative">
         <h2 className="text-7xl mb-12 text-center">Works</h2>
         <div className="grid md:grid-cols-2 gap-6">
