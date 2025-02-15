@@ -3,7 +3,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const words = ["Sofware Project Manager", "Web Developer", "AI Enthusiast"];
+const words = [
+  "Sofware Project Manager",
+  "Web Application Developer",
+  "AI & Cybersecurity Enthusiast",
+];
 
 function useWordCycle(words: string[], interval: number) {
   const [index, setIndex] = useState(0);

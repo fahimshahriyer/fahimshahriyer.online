@@ -34,7 +34,7 @@ function VolunteeringCard({
       <p className="text-sm text-zinc-400 mb-2">
         {role} • {duration}
       </p>
-      <ul className="text-zinc-400 mb-4 list-disc list-inside">
+      <ul className="text-zinc-400 mb-4 list-disc pl-4">
         {description.map((point, index) => (
           <li key={index}>{point}</li>
         ))}

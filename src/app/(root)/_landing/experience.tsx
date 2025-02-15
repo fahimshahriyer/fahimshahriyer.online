@@ -114,7 +114,7 @@ const ExperienceCard = ({
     {keyAchievements && keyAchievements.length > 0 && (
       <div className="mt-4">
         <h4 className="text-zinc-200 font-medium mb-2">Key Achievements:</h4>
-        <ul className="list-disc pl-3 text-zinc-400 space-y-2">
+        <ul className="list-disc pl-4 text-zinc-400 space-y-2">
           {keyAchievements.map((achievement, index) => (
             <li key={index}>{achievement}</li>
           ))}

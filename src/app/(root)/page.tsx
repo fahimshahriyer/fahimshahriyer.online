@@ -32,8 +32,8 @@ export default function Home() {
             </h2>
             <p className="max-w-2xl mx-auto text-gray-400 text-lg">
               Experienced Professional with 6+ years of experience in Agile
-              software development, API integrations, and cloud infrastructure.
-              Focused on backlog management and stakeholder collaboration.
+              software development, API integrations, cloud infrastructure and
+              cybersecurity.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
               <Link
