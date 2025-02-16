@@ -147,7 +147,7 @@ export default function WorksSection() {
       id="works"
     >
       <div className="container mx-auto px-4 z-10 relative">
-        <h2 className="text-7xl mb-12 text-center">Projects</h2>
+        <h2 className="text-7xl mb-12 text-center">Works</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
