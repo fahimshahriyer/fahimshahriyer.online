@@ -91,10 +91,10 @@ const ExperienceCard = ({
   title,
   company,
   duration,
-  responsibilities,
+  // responsibilities,
   location,
-  keyAchievements,
-}: Experience) => (
+}: // keyAchievements,
+Experience) => (
   <div className="border border-zinc-800 p-6 bg-background rounded-lg hover:border-zinc-700 transition-colors cursor-pointer mb-8 relative z-10">
     <div className="flex justify-between items-start mb-4">
       <div>
@@ -106,12 +106,12 @@ const ExperienceCard = ({
         <span className="text-zinc-600 text-sm">{location}</span>
       </div>
     </div>
-    <ul className="list-disc pl-3 text-zinc-400 space-y-2">
+    {/* <ul className="list-disc pl-3 text-zinc-400 space-y-2">
       {responsibilities.map((task, index) => (
         <li key={index}>{task}</li>
       ))}
-    </ul>
-    {keyAchievements && keyAchievements.length > 0 && (
+    </ul> */}
+    {/* {keyAchievements && keyAchievements.length > 0 && (
       <div className="mt-4">
         <h4 className="text-zinc-200 font-medium mb-2">Key Achievements:</h4>
         <ul className="list-disc pl-4 text-zinc-400 space-y-2">
@@ -120,7 +120,7 @@ const ExperienceCard = ({
           ))}
         </ul>
       </div>
-    )}
+    )} */}
   </div>
 );
 
