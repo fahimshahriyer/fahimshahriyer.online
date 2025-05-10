@@ -18,10 +18,10 @@ export default function Home() {
           <div className="space-y-4">
             <div className="relative w-[280px] h-[280px] mx-auto mb-8 rounded-full border-8 border-white/10 overflow-hidden">
               <Image
-                src="/profile.png"
+                src="/profile-2.png"
                 alt="Profile"
                 fill
-                className="object-cover   scale-150"
+                className="object-cover"
               />
             </div>
             <h1 className="text-[100px] md:text-[100px] font-medium text-center text-primary relative z-20 leading-none">
